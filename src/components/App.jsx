@@ -45,11 +45,13 @@ export function App() {
         });
   };
 
-  const normalizedFilter = filter.toLowerCase();
-  const filteredContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(normalizedFilter)
-  );
-  console.log(5);
+  function filteredContacts() {
+    const normalizedFilter = filter.toLowerCase();
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizedFilter)
+    );
+  }
+
   return (
     <>
       <h1 className={css.title}>Phonebook</h1>
@@ -57,7 +59,7 @@ export function App() {
       <h2 className={css.title__contacts}>Contacts</h2>
       <FilterContacts value={filter} onChange={changeFilter} />
       <ContactsList
-        contacts={filteredContacts}
+        contacts={filteredContacts()}
         onDeleteContact={deleteContact}
       />
     </>
