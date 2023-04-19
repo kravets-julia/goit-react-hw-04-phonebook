@@ -1,0 +1,44 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 24px;
+}
+
+.label:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 5px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 5px;
+    width: 230px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    background-color: blue;
+    color: white;
+}
